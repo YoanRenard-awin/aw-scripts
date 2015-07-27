@@ -1,6 +1,6 @@
 #! /bin/sh
 
-@ var
+#var
 user=yoann
 github_account=YoanRenard-awin
 vm=yoannr
