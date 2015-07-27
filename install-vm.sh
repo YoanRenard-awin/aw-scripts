@@ -19,7 +19,7 @@ git clone git@github.com:$github_account/awin-site2.git
 awin-darwin/composer install
 awin-services/composer install
 
-#rsync -r -t --progress -v --cvs-exclude awin-darwin/ admin@yoannr.dev.affiliatewindow.com:/home/sites/darwin.affiliatewindow.com/
-#rsync -r -t --progress -v --cvs-exclude awin-services/ admin@yoannr.dev.affiliatewindow.com:/home/sites/awin-services/
-#rsync -r -t --progress -v --cvs-exclude awin-localization/ admin@yoannr.dev.affiliatewindow.com:/home/sites/localization/
+#rsync -atv --progress --cvs-exclude awin-darwin/ admin@yoannr.dev.affiliatewindow.com:/home/sites/darwin.affiliatewindow.com/
+#rsync -atv --progress --cvs-exclude awin-localization/ admin@yoannr.dev.affiliatewindow.com:/home/sites/localization/
+#rsync -atv --progress --cvs-exclude awin-services/ admin@yoannr.dev.affiliatewindow.com:/home/sites/awin-services
 
