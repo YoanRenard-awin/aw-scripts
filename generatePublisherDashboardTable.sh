@@ -3,6 +3,7 @@
 # vars
 refYear="2015"
 refDate="20150501"
+refMonth="201508"
 ext="23_00"
 sql=""
 if [ -n "$1" ]
@@ -19,6 +20,7 @@ do
     yesterdayYear=`date -d "$i days" +%Y`;
     j=`expr $i + 1`
     todayDate=`date -d "$j days" +%Y%m%d`;
+    todayMonth=`date -d "$j days" +%Y%m`;
     todayYear=`date -d "$j days" +%Y`;
     yesterdayLastMonthDate=`date -d "1 month ago $i days" +%Y%m%d`;
     yesterdayLastMonthYear=`date -d "1 month ago $i days" +%Y`;
@@ -40,6 +42,7 @@ do
     add="$add CREATE TABLE IF NOT EXISTS agg_click_$yesterdayYear.agg_$yesterdayDate$ext                              LIKE agg_click_$refYear.agg_$refDate$ext;\n"
     add="$add CREATE TABLE IF NOT EXISTS agg_click_$yesterdayLastMonthYear.agg_$yesterdayLastMonthDate$ext            LIKE agg_click_$refYear.agg_$refDate$ext;\n"
     add="$add CREATE TABLE IF NOT EXISTS agg_click_$todayYear.agg_$todayDate                                          LIKE agg_click_$refYear.agg_$refDate;\n"
+    add="$add CREATE TABLE IF NOT EXISTS agg_click_$todayYear.agg_$todayMonth                                         LIKE agg_click_$refYear.agg_$refMonth;\n"
 
     add="$add CREATE TABLE IF NOT EXISTS agg_impression_$yesterdayYear.agg_$yesterdayDate$ext                         LIKE agg_impression_$refYear.agg_$refDate$ext;\n"
     add="$add CREATE TABLE IF NOT EXISTS agg_impression_$todayYear.agg_$todayDate                                     LIKE agg_impression_$refYear.agg_$refDate;\n"
