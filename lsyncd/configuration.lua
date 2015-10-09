@@ -1,7 +1,7 @@
 settings  {
-    logfile     = "/home/yoann/lsyncd/lsyncd.log",
-    pidfile     = "/home/yoann/lsyncd/lsyncd.pid",
-    statusFile  = "/home/yoann/lsyncd/lsyncd.status",
+    logfile     = "/home/sites/lsync/lsyncd.log",
+    pidfile     = "/home/sites/lsync/lsyncd.pid",
+    statusFile  = "/home/sites/lsync/lsyncd.status",
     statusInterval = 10,
     delay       = 1,
     nodaemon    = true,
