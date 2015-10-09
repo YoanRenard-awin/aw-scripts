@@ -15,6 +15,10 @@ git clone git@github.com:$github_account/awin-services.git
 git clone git@github.com:$github_account/awin-localization.git
 git clone git@github.com:$github_account/awin-images.git
 git clone git@github.com:$github_account/awin-site2.git
+git clone git@github.com:$github_account/awin-apishared.git
+git clone git@github.com:$github_account/awin-shared-legacy.git
+git clone git@github.com:$github_account/awin-payments.git
+git clone git@github.com:$github_account/awin-reporting.git
 
 awin-darwin/composer install
 awin-services/composer install
@@ -22,4 +26,3 @@ awin-services/composer install
 #rsync -atv --progress --cvs-exclude awin-darwin/ admin@yoannr.dev.affiliatewindow.com:/home/sites/darwin.affiliatewindow.com/
 #rsync -atv --progress --cvs-exclude awin-localization/ admin@yoannr.dev.affiliatewindow.com:/home/sites/localization/
 #rsync -atv --progress --cvs-exclude awin-services/ admin@yoannr.dev.affiliatewindow.com:/home/sites/awin-services
-
